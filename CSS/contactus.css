@@ -1,0 +1,63 @@
+#contact {
+    text-align: center;
+    padding: 40px;
+    margin: 80px 20px;
+    font-family: 'Poppins', sans-serif;
+}
+
+#contact-box {
+    text-align: left;
+    justify-self: left;
+    align-items: flex-start;
+    width: 100%;
+}
+
+#contact h1 {
+    font-size: 2em;
+    color: #ffffff;
+    margin-bottom: 20px;
+    text-align: left;
+    font-family: 'Poppins', sans-serif;
+    text-align: center;
+}
+
+#contact p {
+    line-height: 1.6;
+    font-size: 1.1em;
+    color: #dddddd;
+    text-align: left;
+}
+
+#contact form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+#contact label {
+    color: #ffffff;
+    font-family: 'Poppins', sans-serif;
+}
+
+#contact input,
+#contact textarea,
+#contact select {
+    padding: 8px;
+    border: 1px solid #ffffff;
+    border-radius: 5px;
+    background-color: transparent;
+    color: #ffffff;
+    font-family: 'Poppins', sans-serif;
+}
+
+#contact input[type="submit"] {
+    background:linear-gradient(1px,black,#003366);
+    color: aliceblue;
+    cursor: pointer;
+}
+
+#contact input[type="submit"]:hover {
+    background-color: #001f33;
+}

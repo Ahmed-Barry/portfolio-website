@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap">
+    <link rel="stylesheet" href="css/master.css">
+    <link rel="stylesheet" href="menu.css">
+    <link href="https://fonts.googleapis.com/css?family=Arvo&display=swap" rel="stylesheet">
+    <link href="projectexample.css" rel="stylesheet">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mera's Page - SkillSparkle</title>
+   
+    <style type="text/css">
+        body {
+            background: linear-gradient(#0b141d, #003366);
+            margin: 0;
+            font-family: 'Arial', sans-serif;
+            color: #ffffff;
+        }
+
+        header {
+            position: sticky;
+            top: 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px;
+            border-bottom: 2px solid #ffffff;
+            height: 40px;
+            justify-content: right;
+            text-shadow: 1px 1px 5px rgb(8, 6, 6);
+            position: static;
+        }
+        nav ul{
+            display: flex;
+            padding: 0;
+            list-style: none;
+            gap: 20px;
+            justify-content:right;
+        }
+
+        nav li {
+            color: #ffffff;
+            display: inline;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #d6d6d6;
+            font-weight: bold;
+            font-size: 16px;
+            font-family: 'Poppins', sans-serif;
+        }
+ 
+        header h1{
+            flex: 1;
+            display: flex;
+            justify-content: flex-start;
+            gap: 30px;
+            font-size: small;
+            margin: 10px;
+        }
+        #about{
+            text-align: center;
+            padding: 40px;
+            margin: 80px 20px;
+            height: 300px;
+            display: flex;
+            gap: 10px;
+            font-family: 'Poppins', sans-serif;   
+        }
+        #Aboutbox{
+            text-align: left;
+            justify-self: left;
+            align-items:flex-start;
+            width: 100%;
+
+        }
+        #Aboutbox h3{
+            -webkit-text-stroke:1px #012d58;
+            font-size: 22px;
+            position: relative;
+            display: block;
+        }
+        #Aboutbox h3::before{
+            content: 'Software Engineer';
+            position: absolute;
+            width: 0%;
+            height: 100%;
+            overflow: hidden;
+            color: #dddddd;
+            border-right: 8px solid #dddddd ;
+            transition: 1s ease-in-out;
+            opacity: 0;
+            display: block;
+        }
+        #Aboutbox h3:hover::before{
+            width: 73%;
+            opacity: 1;
+            
+            
+        }
+        #but{
+            background-color: #003366;
+            font-family:'Poppins', sans-serif;
+            margin-left: 3px;
+            justify-content: left;
+            padding: 10px;
+            width: 100px;
+            color: aliceblue;
+            box-shadow: 3px 3px 3px #050f18;
+            border: 1px solid black;
+            border-radius: 5px;
+            opacity: 0.5;
+            margin: 10px;
+        }
+        #but:hover{
+            opacity: 1;
+            transition: cubic-bezier(0.075, 0.82, 0.165, 1);
+        }
+
+        #about h1{
+            font-size: 2em;
+            color: #ffffff;
+            margin-bottom: 20px;
+            text-align: left;
+            font-family: 'Poppins', sans-serif;
+            
+        }
+       
+        #about p{
+            line-height: 1.6;
+            font-size: 1.1em;
+            color: #dddddd;
+            text-align: left;
+        }
+        #about img{
+            width: 100%;
+            height: 100%;
+            opacity: 1;
+            box-shadow: 1px 1px 5px #050f18;
+            position: relative;
+            border-radius: 5px;
+            z-index: -1;
+        }
+        #member{
+            margin: 0;
+            display: flex;
+            gap: 10px;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            
+
+        }
+        .skills-item {
+            width: 100px;
+            height: 300px;
+            background: radial-gradient(#182a3d, #003366,#063463);
+            margin: 20px;
+            flex: 1;
+            border-radius: 5px;
+            border: 3px solid whitesmoke;
+            font-family: 'Poppins', sans-serif;
+            text-align: center;
+            line-height: 0.30in;
+            font-size: 11pt;
+            padding: 20px;
+            overflow: hidden;
+
+        }
+        #member h1 {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>M. Weshah</h1>
+        <nav>
+            <ul>
+                <li><a href="projectone.html">Home Page</a></li>
+                <li><a href="#about">About Mera</a></li>
+                <li><a href="#member">Skills</a></li>
+                <li><a href="#previous-projects">Previous Projects</a></li>
+                <!--<li><a href="contactMera.html">Contact Mera</a></li>-->
+            </ul>
+        </nav>
+    </header>
+    <div id="about">
+        <div>
+            <h1>Mera Weshah</h1>
+            <div id="Aboutbox">
+                <p>
+                    <h3>Software Engineer</h3>
+                    Mera is a dedicated Software Engineer, currently studying at Princess Sumaya University. With a strong foundation in software development, Mera contributes her logical and analytical skills to the SkillSparkle team, ensuring innovative solutions to various challenges.
+                </p>
+                <button id="but" type="button" onclick="Sendemail()"> Email</button>
+                <button style="background-color: darkgoldenrod;" id="but" type="button" onclick="Cvopen()">Mera's CV</button>
+            </div>
+        </div>
+        <div id="Aboutbox">
+            <img src="MeraLogo.png">
+        </div>
+    </div>
+    <hr style="margin-bottom: 0px;">
+    <div id="member">
+        <div class="skills-item">
+            <h1>Software Development</h1>
+            <p>Mera excels in software development, bringing innovative solutions and a keen eye for detail to every project undertaken.</p>
+        </div>
+        <div class="skills-item">
+            <h1>Problem Solving</h1>
+            <p>With a knack for logical reasoning, Mera contributes her analytical skills to SkillSparkle's projects, ensuring effective and efficient problem-solving.</p>
+        </div>
+        <div class="skills-item">
+            <h1>Collaboration</h1>
+            <p>Mera is a collaborative team player, seamlessly working with others to achieve common goals and contribute to the success of the team.</p>
+        </div>
+    </div>
+    <hr style="margin-top: 10%;">
+    <div id="previous-projects">
+        <h1>Previous Projects</h1>
+        
+        <div class="project-item">
+            <h2>Social Media Analytics Dashboard</h2>
+            <p>Designed and developed an analytics dashboard for monitoring social media metrics. Integrated with popular platforms, implemented data visualization using D3.js, and ensured real-time updates. Enhanced user insights through comprehensive charts and graphs.</p>
+        </div>
+        
+        <div class="project-item">
+            <h2>AI-Powered Chatbot Development</h2>
+            <p>Developed an AI-powered chatbot for a customer support application. Implemented natural language processing (NLP) for context-aware responses, integrated with existing CRM systems, and ensured a conversational and user-friendly interface. Utilized Python, Flask, and TensorFlow.</p>        </div>
+        
+        <div class="project-item">
+            <h2>Smart Home Automation System</h2>
+            <p>Engineered a smart home automation system with IoT devices for enhanced comfort and security. Integrated sensors, cameras, and actuators to enable remote control and monitoring. Utilized MQTT protocol, Raspberry Pi, and a mobile app for centralized management.</p>
+        </div>
+        
+        <div class="project-item">
+            <h2>E-commerce Mobile App Integration</h2>
+            <p>Integrated a mobile app for seamless shopping experiences in an e-commerce ecosystem. Implemented secure payment gateways, personalized product recommendations, and synchronized user accounts. Utilized React Native, Firebase, and Stripe for a reliable and responsive mobile application.</p>
+        </div>
+    
+    </div>
+    <hr>
+    <h6 style="text-align: center;
+               font-family: 'Poppins', sans-serif;
+
+    ">&copy; Princess Sumaya University for Technology</h6>
+</body>
+<script>
+    function Sendemail() {
+        window.location.href="mailto:meraweshah.tt@gmail.com";
+    }
+    function Cvopen() {
+        window.location.href="CV/MERA-CV.pdf";
+    }
+</script>
+</html>

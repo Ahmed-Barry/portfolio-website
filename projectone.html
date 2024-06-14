@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap">
+    <link rel="stylesheet" href="css/master.css">
+    <link rel="stylesheet" href="menu.css">
+    <link href="https://fonts.googleapis.com/css?family=Arvo&display=swap" rel="stylesheet">
+    <link href="projectexample.css" rel="stylesheet">
+    <link rel="stylesheet" href="contactus.css">
+    <title>SkillSparkle</title>
+    <style type="text/css">
+        body {
+            background: #001f3f;
+            margin: 0;
+            font-family: 'Arial', sans-serif;
+            color: #ffffff;
+        }
+
+        header {
+            position: sticky;
+            top: 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: linear-gradient(#001f3f, #003366);
+            border-bottom: 2px solid #ffffff;
+            z-index: 1;
+            opacity: 0.95;
+        }
+
+        nav ul {
+            display: flex;
+            padding: 0;
+            list-style: none;
+            gap: 20px;
+            justify-content: right;
+        }
+
+        nav li {
+            color: #fcfcfc;
+            display: inline;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #e2d3d3;
+            font-weight: bold;
+            font-size: 16px;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        header nav {
+            margin-right: 30px;
+        }
+
+        .logo img {
+            width: 100%;
+            max-width: 200px;
+            height: auto;
+        }
+
+        nav ul {
+            display: flex;
+            padding: 0;
+            list-style: none;
+            gap: 20px;
+            justify-content: center;
+        }
+
+        nav li {
+            color: #ffffff;
+            display: inline;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #ffffff;
+            font-weight: bold;
+            font-size: 16px;
+        }
+
+        #about {
+            scroll-margin-top: 170px;
+            text-align: center;
+            padding: 40px;
+            margin: 80px 20px;
+        }
+
+        #about h1 {
+            font-size: 2em;
+            color: #ffffff;
+            margin-bottom: 20px;
+        }
+
+        #about p {
+            line-height: 0.4in;
+            font-size: 1.1em;
+            color: #dddddd;
+            margin-left: 100px;
+            margin-right: 50px;
+        }
+
+        #members {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 20px;
+            padding: 40px;
+            height: max-content;
+        }
+
+        .member-box {
+            width: 200px;
+            height: 300px;
+            background-color: #093159;
+            margin: 10px;
+            transition: all 0.8s cubic-bezier(.215, .61, .355, 1);
+            text-align: center;
+            padding: 20px;
+            overflow: hidden;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            position: relative;
+        }
+
+        .member-box:hover {
+            flex: 4;
+            width: 100%;
+            transition: all 0.8s cubic-bezier(.215, .61, .355, 1);
+        }
+
+        .member-box:not(:hover) {
+            flex: 1;
+            width: 30%;
+            transition: all 0.8s cubic-bezier(.215, .61, .355, 1);
+        }
+
+        .member-box:not(:hover) img {
+            width: 150%;
+            object-fit: fill;
+            border-radius: 8px;
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 150%;
+            opacity: 0.2;
+        }
+
+        .member-box-description {
+            text-align: left;
+            padding: 10px;
+            height: 0;
+            opacity: 0;
+            overflow: hidden;
+            transition: height 0.3s ease, opacity 0.3s ease;
+            font-size: 30pt;
+            padding: 15px;
+        }
+
+        .member-box:hover .member-box-description {
+            height: auto;
+            opacity: 1;
+            font-size: 11pt;
+            line-height: 0.35in;
+            font-family: 'Arial', sans-serif;
+        }
+
+        .member-box a {
+            color: #ffffff;
+            text-decoration: underline;
+            display: block;
+            margin-top: 10px;
+        }
+
+        /* Header transition */
+        .member-box h1 {
+            position: relative;
+            top: 50%;
+            transform: translateY(-50%);
+            transition: top 0.8s cubic-bezier(.215, .61, .355, 1), opacity 0.5s ease;
+            opacity: 0.5;
+        }
+
+        .member-box:hover h1 {
+            top: 0;
+            opacity: 1;
+        }
+
+        #contact fieldset {
+            margin: auto;
+            margin-bottom: 50px;
+            border: 2px solid #003366;
+            padding: 20px;
+            width: 40%;
+            text-align: center;
+        }
+
+        #contact legend {
+            font-size: 2em;
+            text-align: center;
+            color: #ffffff;
+            margin-bottom: 10px;
+        }
+
+        #contact p {
+            font-size: 1.1em;
+            color: #dddddd;
+            line-height: 0.35in;
+        }
+
+        @media only screen and (max-width: 768px) {
+            header {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            nav ul {
+                flex-direction: column;
+                align-items: center;
+                padding-top: 10px;
+            }
+
+            .logo img {
+                max-width: 150px;
+            }
+
+            #members .member-box {
+                width: 100%;
+                margin: 10px 0;
+            }
+
+            #contact fieldset {
+                width: 80%;
+            }
+
+            #members {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .member-box {
+                width: 100%;
+            }
+        }
+
+        select option{
+            background-color: #34495e; 
+            color: #ecf0f1; 
+        }
+
+        
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav role="navigation" class="primary-navigation">
+            <ul>
+                <li><a href="projectone.html">Home</a></li>
+                <li><a href="#members">Our Members</a>
+                    <ul class="dropdown">
+                        <li><a href="ahmed-page.html">Ahmed</a></li>
+                        <li><a href="mira-page.html">Mira</a></li>
+                        <li><a href="zaid-page.html">Zaid</a></li>
+                    </ul>
+                </li>
+                <li><a href="#contact">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div id="about">
+        <h1>Welcome to our home page</h1>
+        <p> where innovation meets expertise! Meet Ahmed, our front-end maestro who crafts visually stunning and
+            seamless user interfaces. Mira, the coding virtuoso, brings software solutions to life with precision and
+            creativity. Last but not least, Zaid, our computer science guru, navigates the digital realm with mastery.
+            Together, we form a powerhouse of diverse skills, delivering cutting-edge solutions that bridge technology
+            and design. Explore our collaborative journey, discover our individual talents, and witness the synergy that
+            fuels our success. Welcome to a world where passion meets proficiency, where Ahmed, Mira and Zaid
+            redefine the possibilities of development. </p>
+    </div>
+
+    <hr>
+    <br>
+
+    <h1 style="text-align: center; display: block; color: #ffffff;">Members</h1>
+    <div id="members">
+        <div class="member-box" onmouseover="hoverMember(this)" onmouseout="unhoverMember(this)">
+
+            <h2>Ahmed</h2>
+            <p class="member-box-description">Ahmed is a Software Engineering student with a passion for building
+                innovative solutions. <a href="ahmed-page.html">Explore Ahmed's Page</a></p>
+        </div>
+        <div class="member-box" onmouseover="hoverMember(this)" onmouseout="unhoverMember(this)">
+
+            <h2>Mira</h2>
+            <p class="member-box-description">Mira, a Software Engineering student at Princess Sumaya University, is our
+                coding enthusiast. With a knack for problem-solving, Mira contributes her logical and analytical skills
+                to SkillSparkle's projects. Explore Mira's coding journey by <a href="mira-page.html"
+                    style="display: inline;">visiting Mira's Portfolio</a></p>
+        </div>
+        <div class="member-box" onmouseover="hoverMember(this)" onmouseout="unhoverMember(this)">
+
+            <h2>Zaid</h2>
+            <p class="member-box-description">Zaid, a Computer Science major at Princess Sumaya University, is a dynamic
+                addition to the SkillSparkle team. With a passion for cutting-edge technologies and a talent for
+                problem-solving, Zaid brings a fresh perspective to software development. Discover more about Zaid's
+                contributions by <a href="zaid-page.html" style="display: inline;">exploring Zaid's Portfolio</a>.</p>
+        </div>
+    </div>
+    <br>
+    <hr>
+    <br><br>
+    <div id="contact">
+        <div>
+            <h1>Get in contact with us</h1>
+            <div id="contact-box">
+                <p style="margin-left: 20%;">
+                    Feel free to reach out to us for any inquiries or collaboration opportunities. We'll get back to you
+                    as soon as possible!
+                </p>
+                <form action="connect.php" method="post">
+                    <label for="name">Your Name:</label>
+                    <input type="text" id="name" name="name" required>
+
+                    <label for="email">Your Email:</label>
+                    <input type="email" id="email" name="email" required>
+
+                    <label for="gender">Your Gender:</label>
+                    <select id="gender" name="gender" required>
+                        <option selected disabled></option>
+                        <option value="male">Male</option>
+                        <option value="female">Female</option>
+                    </select>
+
+                    <label for="service">Choose your Service:</label>
+                    <select id="service" name="service" required>
+                        <option selected disabled></option>
+                        <option value="Design">Design Your Website</option>
+                        <option value="Testing">Test Your Website</option>
+                        <option value="Full Website">Full Website</option>
+                    </select>
+
+                    <label for="member">Who Dp You Want to Work With?</label>
+                    <select id="choosemember" name="member" required>
+                        <option selected disabled></option>
+                        <option value="Zaid">Zaid Abu Dagga</option>
+                        <option value="Mera">Mera Weshah</option>
+                        <option value="Ahmed">Ahmed Barry</option>
+                    </select>
+
+                    <label for="message">Your Message:</label>
+                    <textarea id="message" name="message" rows="4" required></textarea>
+
+                    <input type="submit" value="Send Message">
+                </form>
+            </div>
+        </div>
+    </div>
+    <hr>
+    <h6 style="text-align: center;
+               font-family: 'Arial', sans-serif;
+    ">&copy; Princess Sumaya University for Technology</h6>
+</body>
+
+
+<script>
+    var xhttp = new XMLHttpRequest();
+    xhttp.onreadystatechange = function() {
+        if (this.readyState == 4 && this.status == 200) {
+            document.getElementById("connectionStatus").innerHTML = this.responseText;
+        }
+    };
+    xhttp.open("GET", "connect.php", true);
+    xhttp.send();
+</script>
+
+</html>

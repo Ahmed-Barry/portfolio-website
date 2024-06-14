@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap">
+    <link rel="stylesheet" href="css/master.css">
+    <link rel="stylesheet" href="CSS\menu.css">
+    <link href="https://fonts.googleapis.com/css?family=Arvo&display=swap" rel="stylesheet">
+    <link href="CSS\projectexample.css" rel="stylesheet">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ahmed's Page - SkillSparkle</title>
+   
+    <style type="text/css">
+       body {
+    background: linear-gradient(#0b141d, #003366);
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    color: #ffffff;
+}
+
+header {
+    position: sticky;
+    top: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    border-bottom: 2px solid #ffffff;
+    height: 40px;
+    text-shadow: 1px 1px 5px rgb(8, 6, 6);
+}
+
+nav ul {
+    display: flex;
+    padding: 0;
+    list-style: none;
+    gap: 20px;
+}
+
+nav li {
+    color: #ffffff;
+}
+
+nav a {
+    text-decoration: none;
+    color: #d6d6d6;
+    font-weight: bold;
+    font-size: 16px;
+    font-family: 'Poppins', sans-serif;
+}
+
+header h1 {
+    font-size: small;
+    margin: 10px;
+}
+
+#about {
+    text-align: center;
+    padding: 40px;
+    margin: 80px 20px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    font-family: 'Poppins', sans-serif;
+}
+
+#Aboutbox {
+    text-align: left;
+    flex: 1;
+}
+
+#Aboutbox h3 {
+    -webkit-text-stroke: 1px #012d58;
+    font-size: 22px;
+    position: relative;
+}
+
+#Aboutbox h3::before {
+    content: 'Front-end Developer';
+    position: absolute;
+    width: 0;
+    height: 100%;
+    overflow: hidden;
+    color: #dddddd;
+    border-right: 8px solid #dddddd;
+    transition: 1s ease-in-out;
+    opacity: 0;
+}
+
+#Aboutbox h3:hover::before {
+    width: 73%;
+    opacity: 1;
+}
+
+#but {
+    background-color: #003366;
+    font-family: 'Poppins', sans-serif;
+    padding: 10px;
+    width: 100px;
+    color: aliceblue;
+    box-shadow: 3px 3px 3px #050f18;
+    border: 1px solid black;
+    border-radius: 5px;
+    opacity: 0.5;
+    margin: 10px 0;
+}
+
+#but:hover {
+    opacity: 1;
+    transition: cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+#about h1 {
+    font-size: 2em;
+    color: #ffffff;
+    margin-bottom: 20px;
+    text-align: left;
+    font-family: 'Poppins', sans-serif;
+}
+
+#about p {
+    line-height: 1.6;
+    font-size: 1.1em;
+    color: #dddddd;
+    text-align: left;
+}
+
+#about img {
+    width: 100%;
+    height: auto;
+    opacity: 1;
+    box-shadow: 1px 1px 5px #050f18;
+    border-radius: 5px;
+}
+
+#member {
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+}
+
+.skills-item {
+    width: 100%;
+    max-width: 300px;
+    background: radial-gradient(#182a3d, #003366, #063463);
+    margin: 20px;
+    flex: 1;
+    border-radius: 5px;
+    border: 3px solid whitesmoke;
+    font-family: 'Poppins', sans-serif;
+    text-align: center;
+    line-height: 1.5;
+    font-size: 11pt;
+    padding: 20px;
+    overflow: hidden;
+}
+
+#member h1 {
+    text-align: center;
+}
+
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 10px;
+        height: auto;
+    }
+    
+    nav ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    #about {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    #Aboutbox {
+        width: 100%;
+    }
+
+    .skills-item {
+        max-width: 100%;
+        margin: 10px 0;
+    }
+}
+
+@media (max-width: 480px) {
+    nav a {
+        font-size: 14px;
+    }
+
+    #about h1 {
+        font-size: 1.5em;
+    }
+
+    #about p {
+        font-size: 1em;
+    }
+
+    .skills-item {
+        padding: 10px;
+        font-size: 10pt;
+    }
+}
+
+    </style>
+</head>
+
+<body>
+    <header>
+        
+        <nav role="navigation" class="primary-navigation">
+            <ul>
+              <li><a href="projectone.html">Home</a></li>
+              <li><a href="#">Info</a>
+                <ul class="dropdown">
+                  <li><a href="#about">About Ahmed</a></li>
+                  <li><a href="#member">Skills</a></li>
+                  <li><a href="AHMED-CV.pdf">CV</a></li>
+                  <li><a href="#previous-projects">Previous Projects</a></li>
+                </ul>
+              </li>
+              <!--<li><a href="contactAhmed.html">Contact</a></li>-->
+            </ul>
+          </nav>
+    </header>
+    <div id="about">
+        <div>
+            <h1>Ahmed Khaled</h1>
+            <div id="Aboutbox">
+            <p >
+                <h3>Front-end Developer</h3>
+                Ahmed is a Software Engineering student with a
+                 passion for building innovative solutions A front-end developer specializes in building visually appealing and user-friendly interfaces for websites and applications. Proficient in HTML, CSS, and JavaScript, they collaborate with design teams to create seamless digital experiences.
+            </p>
+            <button id="but"type="button" onclick="Sendemail()"> Email</button>
+            <button style="background-color: darkgoldenrod;" id="but" type="button" onclick="Cvopen()">Ahmed CV</button>
+        </div>
+            </div>
+    </div>
+    <hr style="margin-bottom: 0px;">
+    <div id="member">
+        <div class="skills-item">
+            <h1>Programming Proficiency</h1>
+            <p>Mastery of programming languages forms the cornerstone of a programmer's skill set. Whether it's Python, Java, C++, or another language, a proficient programmer can translate conceptual ideas into functional code</p>
+        </div>
+        <div class="skills-item">
+            <h1>Problem-Solving Aptitude</h1>
+            <p> Beyond writing code, successful programmers possess a keen problem-solving aptitude. They can analyze complex issues, break them down into manageable components, and devise effective solutions.</p>
+        </div>
+        <div class="skills-item">
+            <h1>Effective Communication</h1>
+            <p> In the collaborative environment of software development, effective communication is paramount. Programmers need to convey their ideas clearly, whether discussing code with team members, documenting processes, or explaining solutions to non-technical stakeholders.</p>
+        </div>
+    </div>
+    <hr style="margin-top: 10%;">
+    <div id="previous-projects">
+        <h1>Previous Projects</h1>
+        
+        <div class="project-item">
+            <h2>Portfolio Website Redesign</h2>
+            <p>Redesigned and developed a personal portfolio website to showcase skills and projects. Implemented modern design principles and responsive layout using HTML, CSS, and JavaScript.</p>
+        </div>
+        
+        <div class="project-item">
+            <h2>E-commerce Landing Page</h2>
+            <p>Collaborated with a team to create a visually appealing landing page for an e-commerce website. Implemented product displays, interactive elements, and optimized the page for performance.</p>
+        </div>
+        
+        <div class="project-item">
+            <h2>Mobile App UI Enhancement</h2>
+            <p>Contributed to the enhancement of the user interface for a mobile app. Implemented new features, improved navigation, and ensured a consistent user experience across different devices.</p>
+        </div>
+        
+        <div class="project-item">
+            <h2>Client Website Revamp</h2>
+            <p>Revamped the website for a client in the creative industry. Applied modern design trends, improved site navigation, and optimized performance for a better user experience.</p>
+        </div>
+    
+    </div>
+    <hr>
+    <h6 style="text-align: center;
+               font-family: 'Poppins', sans-serif;
+
+    ">&copy; Princess Sumaya University for Technology</h6>
+</body>
+<script>
+    function Sendemail() {
+    window.location.href = "mailto:Ahmed-barry@outlook.com";
+    }
+    function Cvopen() {
+        window.location.href="CV/Ahmed Khaled CV.pdf";
+    }
+</script>
+</html>
+
